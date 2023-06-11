@@ -1,0 +1,10 @@
+GF_SECURITY_ADMIN_USER=admin
+GF_SECURITY_ADMIN_PASSWORD=admin
+GF_INSTALL_PLUGINS=grafana-clock-panel,grafana-simple-json-datasource
+GF_USERS_ALLOW_SIGN_UP=false
+GF_SERVER_ROOT_URL=http://localhost:3000
+GF_SERVER_DOMAIN=http://localhost:3000
+GF_SMTP_ENABLED=true
+GF_SMTP_HOST=host.docker.internal:1025
+GF_SMTP_USER=
+GF_SMTP_PASSWORD=
