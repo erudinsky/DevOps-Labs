@@ -4,12 +4,15 @@ In previous versions of Grafana, you could only use the API for provisioning dat
 
 Learning objectives: 
 
-* Grafana, provision via config files (passing https://docs.docker.com/engine/reference/commandline/run/)
+* Grafana, provision using configuration files
 * Add annotations
 
 ## Launch Grafana
 
 TODO: docker compose
+
+1. All variables are in the configuration file ([can be passed](https://docs.docker.com/engine/reference/commandline/run/) using `--env-file` flag)
+2. Mounted local directory includes configuration files that are handled by Grafana on launch / restart
 
 ```bash
 
