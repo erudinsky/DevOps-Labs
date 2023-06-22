@@ -2,8 +2,16 @@ global:
   scrape_interval: 15s
 
 rule_files:
-  # - "first.rules"
+  - "rules.yml"
   # - "second.rules"
+
+# Alerting specifies settings related to the Alertmanager
+alerting:
+  alertmanagers:
+    - static_configs:
+      - targets:
+        # Alertmanager's default port is 9093
+        - host.docker.internal:9093
 
 scrape_configs:
 
@@ -25,3 +33,9 @@ scrape_configs:
   static_configs:
     - targets: ['host.docker.internal:9171']
 
+- job_name: minio-job
+  bearer_token: 
+  metrics_path: /minio/v2/metrics/cluster
+  scheme: http
+  static_configs:
+  - targets: ['host.docker.internal:9000']

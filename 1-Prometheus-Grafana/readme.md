@@ -58,7 +58,7 @@ Run Prometheus:
 docker run \
   -d --name prometheus \
   -p 9090:9090 \
-  -v ./prometheus.yml:/etc/prometheus/prometheus.yml \
+  -v ./prometheus:/etc/prometheus/ \
   prom/prometheus
 
 ```

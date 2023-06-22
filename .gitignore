@@ -1,3 +1,4 @@
 grafana_data
 minio
 .DS_Store
+alertmanager
